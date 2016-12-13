@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,7 +21,57 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="candycane" translatesAutoresizingMaskIntoConstraints="NO" id="zob-Ul-KvL">
+                                <rect key="frame" x="20" y="28" width="85" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="RuK-Fo-sso"/>
+                                    <constraint firstAttribute="height" constant="85" id="oAk-IG-biR"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="snowman" translatesAutoresizingMaskIntoConstraints="NO" id="rjL-8Q-VZE">
+                                <rect key="frame" x="270" y="28" width="85" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="MiT-AI-G78"/>
+                                    <constraint firstAttribute="width" constant="85" id="rrG-Ok-i0E"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tree" translatesAutoresizingMaskIntoConstraints="NO" id="0mK-Lu-b9b">
+                                <rect key="frame" x="270" y="562" width="85" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="K8j-JL-1I0"/>
+                                    <constraint firstAttribute="width" constant="85" id="cgp-W5-gXx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stocking" translatesAutoresizingMaskIntoConstraints="NO" id="1kx-T2-ZhQ">
+                                <rect key="frame" x="20" y="562" width="85" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="P74-vy-8dN"/>
+                                    <constraint firstAttribute="width" constant="85" id="qQe-Na-LSd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wreath" translatesAutoresizingMaskIntoConstraints="NO" id="xxR-og-5xd">
+                                <rect key="frame" x="20" y="166" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="xxR-og-5xd" secondAttribute="height" multiplier="1:1" id="OZ0-ND-dz3"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.54509803921568623" blue="0.1764705882352941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rjL-8Q-VZE" secondAttribute="trailing" constant="20" id="FJO-b3-fPD"/>
+                            <constraint firstItem="xxR-og-5xd" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Frm-tv-dj9"/>
+                            <constraint firstItem="rjL-8Q-VZE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="Gvc-F9-fSi"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="0mK-Lu-b9b" secondAttribute="bottom" constant="20" id="Lr3-gE-S0M"/>
+                            <constraint firstItem="zob-Ul-KvL" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="Ug9-tt-AHM"/>
+                            <constraint firstItem="xxR-og-5xd" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="WOg-Cf-dWs"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="1kx-T2-ZhQ" secondAttribute="bottom" constant="20" id="chL-hL-g1i"/>
+                            <constraint firstItem="1kx-T2-ZhQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="hbS-GF-8zS"/>
+                            <constraint firstAttribute="trailing" secondItem="xxR-og-5xd" secondAttribute="trailing" constant="20" id="huj-v9-F91"/>
+                            <constraint firstItem="zob-Ul-KvL" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="ohN-rE-b6e"/>
+                            <constraint firstItem="xxR-og-5xd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="oqY-aD-x3T"/>
+                            <constraint firstAttribute="trailing" secondItem="0mK-Lu-b9b" secondAttribute="trailing" constant="20" id="xoH-Mk-x3l"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +79,11 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="candycane" width="85" height="85"/>
+        <image name="snowman" width="85" height="85"/>
+        <image name="stocking" width="85" height="85"/>
+        <image name="tree" width="85" height="85"/>
+        <image name="wreath" width="500" height="500"/>
+    </resources>
 </document>

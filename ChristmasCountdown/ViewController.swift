@@ -7,19 +7,66 @@
 //
 
 import UIKit
+import UserNotifications
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
+    ////////////////////////////////////////////////////////////
+    // MARK: - IBOutlets
+    ////////////////////////////////////////////////////////////
 
-    override func viewDidLoad() {
+    @IBOutlet weak var daysLabel: UILabel!
+
+    ////////////////////////////////////////////////////////////
+    // MARK: - Properties
+    ////////////////////////////////////////////////////////////
+
+    var xmasDay: Date
+    {
+        let userCalendar = Calendar.current
+        var components = DateComponents()
+        components.year = 2016
+        components.day = 25
+        components.month = 12
+
+        return userCalendar.date(from: components)!
+    }
+
+    ////////////////////////////////////////////////////////////
+
+    var today: Date
+    {
+        let now = Date()
+        let userCalendar = Calendar.current
+        var components = DateComponents()
+        components.year = userCalendar.component(.year, from: now)
+        components.day = userCalendar.component(.day, from: now)
+        components.month = userCalendar.component(.month, from: now)
+
+        return userCalendar.date(from: components)!
+    }
+
+    ////////////////////////////////////////////////////////////
+    // MARK: - View Controller Life Cycle
+    ////////////////////////////////////////////////////////////
+
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let daysTillXmas = daysBetweenDates(startDate: today, endDate: xmasDay)
+        daysLabel.text = "\(daysTillXmas)"
+
+        UIApplication.shared.applicationIconBadgeNumber = daysTillXmas
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    ////////////////////////////////////////////////////////////
+
+    func daysBetweenDates(startDate: Date, endDate: Date) -> Int
+    {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day], from: startDate, to: endDate)
+        return components.day!
     }
-
-
 }
 

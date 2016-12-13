@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.badge])
+        { (granted, error) in
+            if error != nil
+            {
+                print(error?.localizedDescription ?? "There was an unknown error")
+            }
+        }
         return true
     }
 
